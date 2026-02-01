@@ -111,7 +111,7 @@ export default function UseCases() {
               variant="h3"
               fontWeight={800}
               sx={{
-                fontSize: { xs: "2rem", md: "2.5rem" },
+                // fontSize: { xs: "2rem", md: "2.5rem" },
                 background: "linear-gradient(90deg, #FFFFFF 0%, #CBD5E1 100%)",
                 backgroundClip: "text",
                 WebkitBackgroundClip: "text",
