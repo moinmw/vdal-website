@@ -5,25 +5,20 @@ import {
   Container,
   Typography,
   Stack,
-  IconButton,
+
 } from "@mui/material";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import XIcon from "@mui/icons-material/X";
+
+
 
 export default function Footer() {
   const quickMenu = [
     { label: "Home", id: "home" },
-    { label: "Success Stories", id: "success-stories" },
     { label: "Solutions", id: "solution" },
+    { label: "Success Stories", id: "success-stories" },
     { label: "Contact Us", id: "contact" },
   ];
 
-  const socialLinks = [
-    { icon: <LinkedInIcon fontSize="small" />, href: "#" },
-    { icon: <XIcon fontSize="small" />, href: "#" },
-    { icon: <InstagramIcon fontSize="small" />, href: "#" },
-  ];
+
 
   const handleScroll = (id: string) => {
     const section = document.getElementById(id);
@@ -154,28 +149,14 @@ without moving, duplicating, or disrupting source systems.
           </Typography>
 
           <Box sx={{ display: "flex", gap: 1.5 }}>
-            {socialLinks.map((social, index) => (
-              <IconButton
-                key={index}
-                href={social.href}
-                sx={{
-                  width: 38,
-                  height: 38,
-                  bgcolor: "#0F172A",
-                  color: "#94A3B8",
-                  borderRadius: "8px",
-                  border: "1px solid rgba(255,255,255,0.05)",
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    bgcolor: "#3A86F3",
-                    color: "#FFFFFF",
-                    transform: "translateY(-3px)",
-                  },
-                }}
-              >
-                {social.icon}
-              </IconButton>
-            ))}
+                <Box>
+                  <Typography sx={{ color: "#94A3B8", fontSize: "0.85rem" }}>
+                    +966 11 400 0014
+                  </Typography>
+                  <Typography sx={{ color: "#94A3B8", fontSize: "0.85rem" }}>
+                    6319, Alyasmin, Riyadh 13322 2756, Riyadh 11564
+                  </Typography>
+                </Box>
           </Box>
         </Box>
       </Container>

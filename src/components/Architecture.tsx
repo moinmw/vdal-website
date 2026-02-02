@@ -70,7 +70,7 @@ export default function Architecture() {
           <Paper
             elevation={0}
             sx={{
-              background: "rgba(255, 255, 255, 0.02)",
+              background: "rgba(204, 19, 19, 0.02)",
               border: "1px solid rgba(58, 134, 243, 0.2)",
               borderRadius: "24px",
               p: { xs: 2, md: 4 },
@@ -87,11 +87,11 @@ export default function Architecture() {
               },
             }}
           >
-            <Box sx={{ width: "100%", height: "auto", position: "relative" }}>
+            <Box sx={{ width: "100%", height: "100%", position: "relative" }}>
               <Image
-                src="/images/Architecture2.png" // CHANGE THIS TO YOUR IMAGE PATH
+                src="/images/Architecture3.png" // CHANGE THIS TO YOUR IMAGE PATH
                 alt="VDAL Architecture Diagram"
-                width={1200} // Set to your image's base width
+                width={1300} // Set to your image's base width
                 height={700} // Set to your image's base height
                 style={{
                   width: "100%",

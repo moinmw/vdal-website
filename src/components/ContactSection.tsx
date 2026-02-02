@@ -9,12 +9,11 @@ import {
   Stack,
   TextField,
   Button,
-  IconButton,
 } from "@mui/material";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import XIcon from "@mui/icons-material/X";
+
 import EmailIcon from "@mui/icons-material/Email";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 export default function ContactSection() {
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -22,11 +21,7 @@ export default function ContactSection() {
   const [sent, setSent] = useState<boolean>(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  const socialLinks = [
-    { icon: LinkedInIcon, href: "#" },
-    { icon: InstagramIcon, href: "#" },
-    { icon: XIcon, href: "#" },
-  ];
+
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -111,12 +106,55 @@ export default function ContactSection() {
                 <Box>
                   <Typography fontWeight={600}>Email us</Typography>
                   <Typography sx={{ color: "#94A3B8" }}>
-                    example@gmail.com
+                    info@master-works.sa
                   </Typography>
                 </Box>
               </Stack>
 
-              <Stack spacing={2}>
+              {/* Address  */}
+              <Stack direction="row" spacing={2} alignItems="center">
+                <Box
+                  sx={{
+                    bgcolor: "rgba(58, 134, 243, 0.1)",
+                    p: 2,
+                    borderRadius: "12px",
+                    border: "1px solid rgba(58, 134, 243, 0.2)",
+                  }}
+                >
+                  <LocationOnIcon sx={{ color: "#3A86F3" }} />
+                </Box>
+                <Box>
+                  <Typography fontWeight={600}>Address</Typography>
+                  <Typography sx={{ color: "#94A3B8" }}>
+                    6319, Alyasmin, Riyadh 13322 2756, Riyadh 11564
+                  </Typography>
+                </Box>
+              </Stack>
+
+              {/* Mobile  */}
+              <Stack direction="row" spacing={2} alignItems="center">
+                <Box
+                  sx={{
+                    bgcolor: "rgba(58, 134, 243, 0.1)",
+                    p: 2,
+                    borderRadius: "12px",
+                    border: "1px solid rgba(58, 134, 243, 0.2)",
+                  }}
+                >
+                  <PhoneIcon sx={{ color: "#3A86F3" }} />
+                </Box>
+                <Box>
+                  <Typography fontWeight={600}>Mobile</Typography>
+                  <Typography sx={{ color: "#94A3B8" }}>
+                    +966 11 400 0014
+                  </Typography>
+                </Box>
+              </Stack>
+
+
+
+
+              {/* <Stack spacing={2}>
                 <Stack direction="row" spacing={1} alignItems="center">
                   <Box
                     sx={{
@@ -145,7 +183,7 @@ export default function ContactSection() {
                     </IconButton>
                   ))}
                 </Stack>
-              </Stack>
+              </Stack> */}
             </Stack>
           </Box>
 
